@@ -6,6 +6,7 @@ target 'Authenticator' do
   use_frameworks!
 
   # Pods for Authenticator
-  pod 'Firebase/Firestore'
+  pod 'Firebase'
+  pod 'FirebaseUI'
 
 end

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,10 @@
 		AAE950862679163B00F4939A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE950852679163B00F4939A /* Assets.xcassets */; };
 		AAE950892679163B00F4939A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE950872679163B00F4939A /* LaunchScreen.storyboard */; };
 		AAE950972679174600F4939A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE950962679174600F4939A /* LoginViewController.swift */; };
+		AAF7FECD2679205300DF0EA5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7FECC2679205300DF0EA5 /* AccountViewController.swift */; };
+		AAF7FECF267921AD00DF0EA5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7FECE267921AD00DF0EA5 /* SignUpViewController.swift */; };
+		AAF7FED2267923C100DF0EA5 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7FED1267923C100DF0EA5 /* PasswordValidator.swift */; };
+		AAF7FED426792D5400DF0EA5 /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7FED326792D5400DF0EA5 /* FirebaseFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +33,10 @@
 		AAE950882679163B00F4939A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAE9508A2679163B00F4939A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAE950962679174600F4939A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		AAF7FECC2679205300DF0EA5 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AAF7FECE267921AD00DF0EA5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		AAF7FED1267923C100DF0EA5 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
+		AAF7FED326792D5400DF0EA5 /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
 		B1EBB066C63FAD71D2C5522D /* Pods-Authenticator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Authenticator.debug.xcconfig"; path = "Target Support Files/Pods-Authenticator/Pods-Authenticator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,6 +73,7 @@
 		AAE9507B2679163A00F4939A /* Authenticator */ = {
 			isa = PBXGroup;
 			children = (
+				AAF7FED0267923AD00DF0EA5 /* Helpers and Extensions */,
 				AAB347582679197600C39BEA /* GoogleService-Info.plist */,
 				AAE950932679172100F4939A /* Controllers */,
 				AAE950912679171500F4939A /* Storyboards */,
@@ -105,8 +114,19 @@
 			isa = PBXGroup;
 			children = (
 				AAE950962679174600F4939A /* LoginViewController.swift */,
+				AAF7FECE267921AD00DF0EA5 /* SignUpViewController.swift */,
+				AAF7FECC2679205300DF0EA5 /* AccountViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		AAF7FED0267923AD00DF0EA5 /* Helpers and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AAF7FED1267923C100DF0EA5 /* PasswordValidator.swift */,
+				AAF7FED326792D5400DF0EA5 /* FirebaseFunctions.swift */,
+			);
+			path = "Helpers and Extensions";
 			sourceTree = "<group>";
 		};
 		B7C23AAAB1A484FC1E6733F1 /* Frameworks */ = {
@@ -123,7 +143,6 @@
 				B1EBB066C63FAD71D2C5522D /* Pods-Authenticator.debug.xcconfig */,
 				59090E5E63F3AE00AE21CA67 /* Pods-Authenticator.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -139,6 +158,7 @@
 				AAE950762679163A00F4939A /* Frameworks */,
 				AAE950772679163A00F4939A /* Resources */,
 				432612B7618AE7FABF96E8BF /* [CP] Embed Pods Frameworks */,
+				861D1EA7022F6A78139DC329 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -213,6 +233,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Authenticator/Pods-Authenticator-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		861D1EA7022F6A78139DC329 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Authenticator/Pods-Authenticator-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Authenticator/Pods-Authenticator-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Authenticator/Pods-Authenticator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		E440DCDADC234570AF195175 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -243,8 +280,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE950972679174600F4939A /* LoginViewController.swift in Sources */,
+				AAF7FED426792D5400DF0EA5 /* FirebaseFunctions.swift in Sources */,
+				AAF7FED2267923C100DF0EA5 /* PasswordValidator.swift in Sources */,
 				AAE9507D2679163A00F4939A /* AppDelegate.swift in Sources */,
+				AAF7FECD2679205300DF0EA5 /* AccountViewController.swift in Sources */,
 				AAE9507F2679163A00F4939A /* SceneDelegate.swift in Sources */,
+				AAF7FECF267921AD00DF0EA5 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
