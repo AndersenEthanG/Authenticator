@@ -19,28 +19,36 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="3BE-VE-1Bb">
                                 <rect key="frame" x="64" y="152" width="286" height="646"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yrm-el-IY6">
-                                        <rect key="frame" x="0.0" y="0.0" width="286" height="86.5"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yrm-el-IY6">
+                                        <rect key="frame" x="0.0" y="0.0" width="286" height="49"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w80-yi-gIe">
-                                        <rect key="frame" x="0.0" y="186.5" width="286" height="86.5"/>
+                                        <rect key="frame" x="0.0" y="149" width="286" height="49.5"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQD-xr-Z3j">
-                                        <rect key="frame" x="0.0" y="373" width="286" height="86.5"/>
+                                        <rect key="frame" x="0.0" y="298.5" width="286" height="49"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <state key="normal" title="Create Account"/>
                                         <connections>
                                             <segue destination="Tw5-9Z-Taa" kind="show" id="lOJ-lD-uOV"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qDw-M2-vmg">
+                                        <rect key="frame" x="0.0" y="447.5" width="286" height="49.5"/>
+                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <state key="normal" title="Test Button"/>
+                                        <connections>
+                                            <action selector="testBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fC9-tE-1Ip"/>
+                                        </connections>
+                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XEk-D6-ocp">
-                                        <rect key="frame" x="0.0" y="559.5" width="286" height="86.5"/>
+                                        <rect key="frame" x="0.0" y="597" width="286" height="49"/>
                                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                                         <state key="normal" title="Login"/>
                                         <connections>
@@ -61,8 +69,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="0uE-ZH-5Qv"/>
                     <connections>
+                        <outlet property="emailField" destination="Yrm-el-IY6" id="zLy-ep-nnB"/>
                         <outlet property="passwordField" destination="w80-yi-gIe" id="1d8-tv-8eK"/>
-                        <outlet property="usernameField" destination="Yrm-el-IY6" id="zLy-ep-nnB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -72,7 +80,6 @@
         <!--Sign Up View Controller-->
         <scene sceneID="BtK-jk-pBO">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9HK-aU-4TX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="Tw5-9Z-Taa" customClass="SignUpViewController" customModule="Authenticator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wz8-U5-jxF">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -148,13 +155,14 @@
                         <outlet property="usernameField" destination="a5K-Ja-EAr" id="1E7-e1-pb7"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9HK-aU-4TX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1958" y="880"/>
         </scene>
-        <!--Account View Controller-->
+        <!--AccountVC-->
         <scene sceneID="RNi-3y-40O">
             <objects>
-                <viewController id="V1y-pf-Tp1" customClass="AccountViewController" customModule="Authenticator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController restorationIdentifier="AccountVC" storyboardIdentifier="AccountVC" title="AccountVC" id="V1y-pf-Tp1" customClass="AccountViewController" customModule="Authenticator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wla-Rd-eMZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -199,10 +207,11 @@
                             <constraint firstItem="2ac-Zf-Wuf" firstAttribute="leading" secondItem="EmY-FO-XTH" secondAttribute="leading" constant="64" id="U28-N1-uTL"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="akD-Ob-oIX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cOR-Ht-yEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2721.739130434783" y="137.94642857142856"/>
+            <point key="canvasLocation" x="2757" y="138"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="GXw-xe-WvZ">

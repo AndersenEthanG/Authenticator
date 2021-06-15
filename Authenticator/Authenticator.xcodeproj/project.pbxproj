@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		74B104CC0F619ED043A12B8A /* Pods_Authenticator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30667E1957777604CBF3A8E6 /* Pods_Authenticator.framework */; };
+		AA8BC22C267962F4001229AF /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BC22B267962F4001229AF /* AccountViewController.swift */; };
 		AAB347592679197600C39BEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAB347582679197600C39BEA /* GoogleService-Info.plist */; };
 		AAE9507D2679163A00F4939A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9507C2679163A00F4939A /* AppDelegate.swift */; };
 		AAE9507F2679163A00F4939A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9507E2679163A00F4939A /* SceneDelegate.swift */; };
@@ -15,7 +16,6 @@
 		AAE950862679163B00F4939A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAE950852679163B00F4939A /* Assets.xcassets */; };
 		AAE950892679163B00F4939A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE950872679163B00F4939A /* LaunchScreen.storyboard */; };
 		AAE950972679174600F4939A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE950962679174600F4939A /* LoginViewController.swift */; };
-		AAF7FECD2679205300DF0EA5 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7FECC2679205300DF0EA5 /* AccountViewController.swift */; };
 		AAF7FECF267921AD00DF0EA5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7FECE267921AD00DF0EA5 /* SignUpViewController.swift */; };
 		AAF7FED2267923C100DF0EA5 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7FED1267923C100DF0EA5 /* PasswordValidator.swift */; };
 		AAF7FED426792D5400DF0EA5 /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7FED326792D5400DF0EA5 /* FirebaseFunctions.swift */; };
@@ -24,6 +24,7 @@
 /* Begin PBXFileReference section */
 		30667E1957777604CBF3A8E6 /* Pods_Authenticator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Authenticator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59090E5E63F3AE00AE21CA67 /* Pods-Authenticator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Authenticator.release.xcconfig"; path = "Target Support Files/Pods-Authenticator/Pods-Authenticator.release.xcconfig"; sourceTree = "<group>"; };
+		AA8BC22B267962F4001229AF /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		AAB347582679197600C39BEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAE950792679163A00F4939A /* Authenticator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authenticator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE9507C2679163A00F4939A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,7 +34,6 @@
 		AAE950882679163B00F4939A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AAE9508A2679163B00F4939A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAE950962679174600F4939A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		AAF7FECC2679205300DF0EA5 /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		AAF7FECE267921AD00DF0EA5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		AAF7FED1267923C100DF0EA5 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
 		AAF7FED326792D5400DF0EA5 /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
@@ -115,7 +115,7 @@
 			children = (
 				AAE950962679174600F4939A /* LoginViewController.swift */,
 				AAF7FECE267921AD00DF0EA5 /* SignUpViewController.swift */,
-				AAF7FECC2679205300DF0EA5 /* AccountViewController.swift */,
+				AA8BC22B267962F4001229AF /* AccountViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -281,9 +281,9 @@
 			files = (
 				AAE950972679174600F4939A /* LoginViewController.swift in Sources */,
 				AAF7FED426792D5400DF0EA5 /* FirebaseFunctions.swift in Sources */,
+				AA8BC22C267962F4001229AF /* AccountViewController.swift in Sources */,
 				AAF7FED2267923C100DF0EA5 /* PasswordValidator.swift in Sources */,
 				AAE9507D2679163A00F4939A /* AppDelegate.swift in Sources */,
-				AAF7FECD2679205300DF0EA5 /* AccountViewController.swift in Sources */,
 				AAE9507F2679163A00F4939A /* SceneDelegate.swift in Sources */,
 				AAF7FECF267921AD00DF0EA5 /* SignUpViewController.swift in Sources */,
 			);

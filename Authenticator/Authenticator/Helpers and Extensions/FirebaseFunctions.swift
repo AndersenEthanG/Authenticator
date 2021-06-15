@@ -17,7 +17,6 @@ class FirebaseFunctions {
             if let 🛑 = 🛑 {
                 print("Error in \(#function)\(#line) : \(🛑.localizedDescription) \n---\n \(🛑)")
             } else {
-                let db = Firestore.firestore()
                 let data = [
                     "firstName" : firstName,
                     "lastName" : lastName,
@@ -26,7 +25,7 @@ class FirebaseFunctions {
                 ] as [String : Any]
                 
                 // This is the only real important line, adds the users
-                db.collection("users").addDocument(data: data) { 🛑 in
+                Firestore.firestore().collection("users").addDocument(data: data) { 🛑 in
                     if let 🛑 = 🛑 {
                         print("Error in \(#function)\(#line) : \(🛑.localizedDescription) \n---\n \(🛑)")
                     }
@@ -35,5 +34,18 @@ class FirebaseFunctions {
         } // End of Auth
     } // End of Create user Function
     
+    static func signInUser(email: String, password: String, 🐶: @escaping (Result <Bool, Error>) -> Void) {
+        Auth.auth().signIn(withEmail: email, password: password) { result, 🛑 in
+            switch result {
+            case .none:
+                if let 🛑 = 🛑 {
+                    print("Error in \(#function)\(#line) : \(🛑.localizedDescription) \n---\n \(🛑)")
+                    🐶(.failure(🛑))
+                }
+            case .some(_):
+                🐶(.success(true))
+            }
+        } // End of Auth
+    } // End of Function Sign In
     
 } // End of Class

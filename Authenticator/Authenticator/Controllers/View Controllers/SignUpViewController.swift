@@ -37,7 +37,7 @@ class SignUpViewController: UIViewController {
         print("User \(usernameField.text ?? "") created!")
         // Pop view
         navigationController?.popViewController(animated: true)
-    } // End of Function
+    } // End of Action
 
     
     // MARK: - Functions
