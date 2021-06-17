@@ -19,7 +19,13 @@ class LoginViewController: UIViewController {
     // MARK: - Lifecylce
     override func viewDidLoad() {
         super.viewDidLoad()
+        loginFunc()
     } // End of Function
+    
+    func loginFunc() {
+        emailField.text = "AndersenEthanG@gmail.com"
+        passwordField.text  = "Str0ngP@ssw0rd."
+    }
     
     // MARK: - Actions
     @IBAction func loginBtn(_ sender: Any) {

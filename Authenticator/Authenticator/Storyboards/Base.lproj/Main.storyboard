@@ -160,7 +160,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="2ac-Zf-Wuf">
-                                <rect key="frame" x="64" y="172" width="286" height="308.5"/>
+                                <rect key="frame" x="64" y="172" width="286" height="370.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="99" translatesAutoresizingMaskIntoConstraints="NO" id="hEt-8u-MvZ">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="20.5"/>
@@ -188,6 +188,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BP7-hw-78k">
+                                        <rect key="frame" x="0.0" y="340.5" width="286" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="fetchUsersBtn:" destination="V1y-pf-Tp1" eventType="touchUpInside" id="lOt-LP-g0S"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                         </subviews>

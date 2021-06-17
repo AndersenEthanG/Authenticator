@@ -30,7 +30,7 @@ class SignUpViewController: UIViewController {
         // Validate fields
         if validateFields() == true {
             // Create user via Firebase
-            //            FirebaseFunctions.createUser(email: emailField.text!, password: passwordField.text!, firstName: firstNameField.text!, lastName: lastNameField.text!, note: noteField.text!, username: usernameField.text!)
+                        FirebaseFunctions.createUser(email: emailField.text!, password: passwordField.text!, firstName: firstNameField.text!, lastName: lastNameField.text!, note: noteField.text!, username: usernameField.text!)
             print("User \(usernameField.text ?? "") created!")
             // Pop view
             navigationController?.popViewController(animated: true)
@@ -54,11 +54,13 @@ class SignUpViewController: UIViewController {
             (passwordField.text != passwordField.text) ||
             // Thich checks password length
             (usernameField.text!.count < 16) {
+        } else {
+            // TODO - Display an alert
             print("Please fill out all fields")
-        } else { return false }
-        // This doesn't seem to work
+            return false
+        }
         if PasswordValidator.passwordValid(passwordField.text!) == false {
-            // TODO display alert
+            // TODO - Display alert
             print("Password must have one capital letter, one number, one symbol, and be between 6 and 16 characters")
             return false
         }

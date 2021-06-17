@@ -68,4 +68,20 @@ class FirebaseFunctions {
         } // End of getDocument
     } // End of Function fetchData
     
+    static func fetchUsers(🐶: @escaping ( Any ) -> Void) {
+        Firestore.firestore().collection("users").getDocuments { snapshot, 🛑 in
+            if let 🛑 = 🛑 {
+                print("Error in \(#function)\(#line) : \(🛑.localizedDescription) \n---\n \(🛑)")
+            }
+            if let snapshot = snapshot {
+                var users: [String] = []
+                for document in snapshot.documents {
+                    users.append(document.documentID)
+                }
+                🐶(users)
+            }
+        }
+    } // End of FetchUsers Function
+    
+    
 } // End of Class
