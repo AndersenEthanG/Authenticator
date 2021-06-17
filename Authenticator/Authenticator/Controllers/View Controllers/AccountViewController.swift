@@ -9,20 +9,27 @@ import UIKit
 
 class AccountViewController: UIViewController {
 
+    // MARK: - Outlets
+    @IBOutlet weak var firstNameLabel: UILabel!
+    @IBOutlet weak var lastNameLabel: UILabel!
+    @IBOutlet weak var noteLabel: UILabel!
+    
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        updateView()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-}
+    // MARK: - Functions
+    func updateView() {
+        // Fetch data
+        FirebaseFunctions.fetchData { data in
+            // Update outlets
+            self.firstNameLabel.text = (data["firstName"] as! String)
+            self.lastNameLabel.text = (data["lastName"] as! String)
+            self.noteLabel.text = (data["note"] as! String)
+        }
+    } // End of Function fetch data
+    
+} // End of Class

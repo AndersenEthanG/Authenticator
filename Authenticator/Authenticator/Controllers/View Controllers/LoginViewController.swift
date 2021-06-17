@@ -19,15 +19,7 @@ class LoginViewController: UIViewController {
     // MARK: - Lifecylce
     override func viewDidLoad() {
         super.viewDidLoad()
-        tempUpdate()
     } // End of Function
-    
-    /// Watch out for this....
-    func tempUpdate() {
-        emailField.text = "AndersenEthanG@gmail.com"
-        passwordField.text = "Str0ngP@ssw0rd."
-    }
-
     
     // MARK: - Actions
     @IBAction func loginBtn(_ sender: Any) {
@@ -60,7 +52,7 @@ class LoginViewController: UIViewController {
             print("Please enter username and password fields")
             return false
         } else {
-            print("Names accepted!")
+            print("Username and Password fields cleared!")
             return true
         }
     } // End of Function
