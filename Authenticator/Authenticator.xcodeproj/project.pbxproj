@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		74B104CC0F619ED043A12B8A /* Pods_Authenticator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30667E1957777604CBF3A8E6 /* Pods_Authenticator.framework */; };
 		AA8BC22C267962F4001229AF /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BC22B267962F4001229AF /* AccountViewController.swift */; };
+		AA9016F1267D04200029A541 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9016F0267D04200029A541 /* UsersTableViewController.swift */; };
+		AA9016F4267D04CB0029A541 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9016F3267D04CB0029A541 /* UserTableViewCell.swift */; };
 		AAB347592679197600C39BEA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AAB347582679197600C39BEA /* GoogleService-Info.plist */; };
 		AAE9507D2679163A00F4939A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9507C2679163A00F4939A /* AppDelegate.swift */; };
 		AAE9507F2679163A00F4939A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE9507E2679163A00F4939A /* SceneDelegate.swift */; };
@@ -25,6 +27,8 @@
 		30667E1957777604CBF3A8E6 /* Pods_Authenticator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Authenticator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59090E5E63F3AE00AE21CA67 /* Pods-Authenticator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Authenticator.release.xcconfig"; path = "Target Support Files/Pods-Authenticator/Pods-Authenticator.release.xcconfig"; sourceTree = "<group>"; };
 		AA8BC22B267962F4001229AF /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		AA9016F0267D04200029A541 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		AA9016F3267D04CB0029A541 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		AAB347582679197600C39BEA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		AAE950792679163A00F4939A /* Authenticator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Authenticator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAE9507C2679163A00F4939A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +56,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA9016F2267D049D0029A541 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				AA9016F3267D04CB0029A541 /* UserTableViewCell.swift */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
 		AAE950702679163A00F4939A = {
 			isa = PBXGroup;
 			children = (
@@ -116,6 +128,8 @@
 				AAE950962679174600F4939A /* LoginViewController.swift */,
 				AAF7FECE267921AD00DF0EA5 /* SignUpViewController.swift */,
 				AA8BC22B267962F4001229AF /* AccountViewController.swift */,
+				AA9016F0267D04200029A541 /* UsersTableViewController.swift */,
+				AA9016F2267D049D0029A541 /* Custom Cells */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -280,7 +294,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AAE950972679174600F4939A /* LoginViewController.swift in Sources */,
+				AA9016F4267D04CB0029A541 /* UserTableViewCell.swift in Sources */,
 				AAF7FED426792D5400DF0EA5 /* FirebaseFunctions.swift in Sources */,
+				AA9016F1267D04200029A541 /* UsersTableViewController.swift in Sources */,
 				AA8BC22C267962F4001229AF /* AccountViewController.swift in Sources */,
 				AAF7FED2267923C100DF0EA5 /* PasswordValidator.swift in Sources */,
 				AAE9507D2679163A00F4939A /* AppDelegate.swift in Sources */,

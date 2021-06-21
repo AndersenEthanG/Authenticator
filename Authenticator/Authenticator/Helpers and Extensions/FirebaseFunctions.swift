@@ -53,7 +53,7 @@ class FirebaseFunctions {
     
     
     // MARK: - Fetch Data
-    static func fetchData(🐶: @escaping ( [String : Any] ) -> Void) {
+    static func fetchCurrentUserData(🐶: @escaping ( [String : Any] ) -> Void) {
         // Get current user UID
         let uid = Auth.auth().currentUser?.uid
         // Fetch data
@@ -68,20 +68,50 @@ class FirebaseFunctions {
         } // End of getDocument
     } // End of Function fetchData
     
-    static func fetchUsers(🐶: @escaping ( Any ) -> Void) {
+    static func fetchUsers(🐶: @escaping ( [String] ) -> Void) {
         Firestore.firestore().collection("users").getDocuments { snapshot, 🛑 in
             if let 🛑 = 🛑 {
                 print("Error in \(#function)\(#line) : \(🛑.localizedDescription) \n---\n \(🛑)")
+                return 🐶([])
             }
             if let snapshot = snapshot {
-                var users: [String] = []
+                var userIds: [String] = []
                 for document in snapshot.documents {
-                    users.append(document.documentID)
+                    userIds.append(document.documentID)
                 }
-                🐶(users)
-            }
+                var usersNames: [String] = []
+                let group = DispatchGroup()
+                
+                for i in userIds {
+                    group.enter()
+                    FirebaseFunctions.fetchUserData(uid: i) { data in
+                        // Data to return
+                        let firstName: String = data["firstName"] as! String
+                        let lastName: String = data["lastName"] as! String
+                        usersNames.append(firstName + " " + lastName)
+                        group.leave()
+                    }
+                } // End of Loop
+                group.notify(queue: DispatchQueue.main) {
+                    🐶(usersNames)
+                }
+            } // End of Snapshot
         }
     } // End of FetchUsers Function
-    
+
+    static func fetchUserData(uid: String ,🐶: @escaping ( [String : Any] ) -> Void) {
+        // Get current user UID
+        let uid = uid
+        // Fetch data
+        let userData = Firestore.firestore().collection("users").document(uid)
+        userData.getDocument { ( document, 🛑 ) in
+            if let 🛑 = 🛑 {
+                print("Error in \(#function)\(#line) : \(🛑.localizedDescription) \n---\n \(🛑)")
+            } else {
+                // dataInfo is the user information
+                🐶(document!.data()!)
+            }
+        } // End of getDocument
+    } // End of Function fetchData
     
 } // End of Class

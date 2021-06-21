@@ -24,7 +24,7 @@ class AccountViewController: UIViewController {
     // MARK: - Functions
     func updateView() {
         // Fetch data
-        FirebaseFunctions.fetchData { data in
+        FirebaseFunctions.fetchCurrentUserData { data in
             // Update outlets
             self.firstNameLabel.text = (data["firstName"] as! String)
             self.lastNameLabel.text = (data["lastName"] as! String)
@@ -33,20 +33,4 @@ class AccountViewController: UIViewController {
     } // End of Function fetch data
     
     
-    // MARK: - Actions
-    @IBAction func fetchUsersBtn(_ sender: Any) {
-        FirebaseFunctions.fetchUsers { data in
-//            updateFriendTableViewCells(data)
-            print(data)
-        }
-    } // End of Function fetch Users
-    
-    /*
-    func updateFriendTableViewCells(data: [String]) {
-        for i in infinity {
-            firestore.fetch.collections where id = data[0]
-            friend.firstna.text = i.firstName
-        }
-    }
-    */
 } // End of Class
