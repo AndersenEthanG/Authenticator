@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vxe-o3-kvW">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Photo View Controller-->
+        <scene sceneID="dhX-7A-6Jc">
+            <objects>
+                <viewController storyboardIdentifier="PhotoVC" id="R39-82-2go" customClass="PhotoViewController" customModule="Authenticator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="klh-4Q-w0p">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="9oW-Ia-94T">
+                                <rect key="frame" x="8" y="96" width="412" height="202"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="pzh-VR-ogG">
+                                        <rect key="frame" x="0.0" y="0.0" width="202" height="176"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Image Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9e0-bf-Dii">
+                                                <rect key="frame" x="0.0" y="0.0" width="202" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Creator Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xth-AC-W3f">
+                                                <rect key="frame" x="0.0" y="50" width="202" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSt-5v-zA1">
+                                                <rect key="frame" x="0.0" y="100" width="202" height="30"/>
+                                                <state key="normal" title="Pick Photo"/>
+                                                <connections>
+                                                    <action selector="pickPhotoBtn:" destination="R39-82-2go" eventType="touchUpInside" id="qtc-EP-eyR"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hcl-sJ-DxP">
+                                                <rect key="frame" x="0.0" y="146" width="202" height="30"/>
+                                                <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveBtn:" destination="R39-82-2go" eventType="touchUpInside" id="WpX-lA-2Pt"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C76-Sn-QWe">
+                                        <rect key="frame" x="210" y="0.0" width="202" height="202"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="C76-Sn-QWe" secondAttribute="height" multiplier="1:1" id="klp-f0-TRv"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Me3-d1-shM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9oW-Ia-94T" firstAttribute="leading" secondItem="klh-4Q-w0p" secondAttribute="leading" constant="8" id="0o2-lk-61t"/>
+                            <constraint firstAttribute="trailing" secondItem="9oW-Ia-94T" secondAttribute="trailing" constant="8" id="biu-3g-dua"/>
+                            <constraint firstItem="9oW-Ia-94T" firstAttribute="top" secondItem="Me3-d1-shM" secondAttribute="top" constant="8" id="vJP-lE-1pc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hea-M3-vhj"/>
+                    <connections>
+                        <outlet property="creatorNameField" destination="Xth-AC-W3f" id="7ix-RR-PWw"/>
+                        <outlet property="imageTitleField" destination="9e0-bf-Dii" id="YE8-p2-UvE"/>
+                        <outlet property="imageView" destination="C76-Sn-QWe" id="uRu-3G-hxQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W9v-RY-gF4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1807" y="138"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="3SD-qt-5bo">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="vxe-o3-kvW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nKa-bc-aXF">
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="R39-82-2go" kind="relationship" relationship="rootViewController" id="Gov-k0-USn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUC-95-Qbf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1002.8985507246377" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

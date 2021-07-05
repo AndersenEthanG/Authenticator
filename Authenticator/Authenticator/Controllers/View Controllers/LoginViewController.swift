@@ -19,10 +19,10 @@ class LoginViewController: UIViewController {
     // MARK: - Lifecylce
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginFunc()
+        konamiLoginFunc()
     } // End of Function
     
-    func loginFunc() {
+    func konamiLoginFunc() {
         emailField.text = "AndersenEthanG@gmail.com"
         passwordField.text  = "Str0ngP@ssw0rd."
     }

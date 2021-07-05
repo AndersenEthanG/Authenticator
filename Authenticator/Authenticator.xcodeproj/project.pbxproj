@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		74B104CC0F619ED043A12B8A /* Pods_Authenticator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30667E1957777604CBF3A8E6 /* Pods_Authenticator.framework */; };
+		AA349482268BE40B00467C0C /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA349480268BE40B00467C0C /* FirebaseFunctions.swift */; };
+		AA349483268BE40B00467C0C /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA349481268BE40B00467C0C /* PasswordValidator.swift */; };
+		AA349485268BE58B00467C0C /* Photo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA349484268BE58B00467C0C /* Photo.storyboard */; };
+		AA349487268BE5F000467C0C /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA349486268BE5F000467C0C /* PhotoViewController.swift */; };
+		AA349489268BE85400467C0C /* FirebasePhotoFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA349488268BE85400467C0C /* FirebasePhotoFunctions.swift */; };
+		AA34948B268BEBD500467C0C /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA34948A268BEBD500467C0C /* Photo.swift */; };
 		AA8BC22C267962F4001229AF /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA8BC22B267962F4001229AF /* AccountViewController.swift */; };
 		AA9016F1267D04200029A541 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9016F0267D04200029A541 /* UsersTableViewController.swift */; };
 		AA9016F4267D04CB0029A541 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA9016F3267D04CB0029A541 /* UserTableViewCell.swift */; };
@@ -19,13 +25,17 @@
 		AAE950892679163B00F4939A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AAE950872679163B00F4939A /* LaunchScreen.storyboard */; };
 		AAE950972679174600F4939A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAE950962679174600F4939A /* LoginViewController.swift */; };
 		AAF7FECF267921AD00DF0EA5 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7FECE267921AD00DF0EA5 /* SignUpViewController.swift */; };
-		AAF7FED2267923C100DF0EA5 /* PasswordValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7FED1267923C100DF0EA5 /* PasswordValidator.swift */; };
-		AAF7FED426792D5400DF0EA5 /* FirebaseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAF7FED326792D5400DF0EA5 /* FirebaseFunctions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		30667E1957777604CBF3A8E6 /* Pods_Authenticator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Authenticator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		59090E5E63F3AE00AE21CA67 /* Pods-Authenticator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Authenticator.release.xcconfig"; path = "Target Support Files/Pods-Authenticator/Pods-Authenticator.release.xcconfig"; sourceTree = "<group>"; };
+		AA349480268BE40B00467C0C /* FirebaseFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
+		AA349481268BE40B00467C0C /* PasswordValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
+		AA349484268BE58B00467C0C /* Photo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Photo.storyboard; sourceTree = "<group>"; };
+		AA349486268BE5F000467C0C /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		AA349488268BE85400467C0C /* FirebasePhotoFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebasePhotoFunctions.swift; sourceTree = "<group>"; };
+		AA34948A268BEBD500467C0C /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		AA8BC22B267962F4001229AF /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		AA9016F0267D04200029A541 /* UsersTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		AA9016F3267D04CB0029A541 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
@@ -39,8 +49,6 @@
 		AAE9508A2679163B00F4939A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AAE950962679174600F4939A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		AAF7FECE267921AD00DF0EA5 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		AAF7FED1267923C100DF0EA5 /* PasswordValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordValidator.swift; sourceTree = "<group>"; };
-		AAF7FED326792D5400DF0EA5 /* FirebaseFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFunctions.swift; sourceTree = "<group>"; };
 		B1EBB066C63FAD71D2C5522D /* Pods-Authenticator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Authenticator.debug.xcconfig"; path = "Target Support Files/Pods-Authenticator/Pods-Authenticator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,6 +64,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AA34948C268BEBD800467C0C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AA34948A268BEBD500467C0C /* Photo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		AA9016F2267D049D0029A541 /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +106,7 @@
 				AAE950932679172100F4939A /* Controllers */,
 				AAE950912679171500F4939A /* Storyboards */,
 				AAE950902679170700F4939A /* Resources */,
+				AA34948C268BEBD800467C0C /* Models */,
 			);
 			path = Authenticator;
 			sourceTree = "<group>";
@@ -110,6 +127,7 @@
 			children = (
 				AAE950822679163A00F4939A /* Main.storyboard */,
 				AAE950872679163B00F4939A /* LaunchScreen.storyboard */,
+				AA349484268BE58B00467C0C /* Photo.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -130,6 +148,7 @@
 				AA8BC22B267962F4001229AF /* AccountViewController.swift */,
 				AA9016F0267D04200029A541 /* UsersTableViewController.swift */,
 				AA9016F2267D049D0029A541 /* Custom Cells */,
+				AA349486268BE5F000467C0C /* PhotoViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -137,8 +156,9 @@
 		AAF7FED0267923AD00DF0EA5 /* Helpers and Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				AAF7FED1267923C100DF0EA5 /* PasswordValidator.swift */,
-				AAF7FED326792D5400DF0EA5 /* FirebaseFunctions.swift */,
+				AA349480268BE40B00467C0C /* FirebaseFunctions.swift */,
+				AA349481268BE40B00467C0C /* PasswordValidator.swift */,
+				AA349488268BE85400467C0C /* FirebasePhotoFunctions.swift */,
 			);
 			path = "Helpers and Extensions";
 			sourceTree = "<group>";
@@ -222,6 +242,7 @@
 			files = (
 				AAE950892679163B00F4939A /* LaunchScreen.storyboard in Resources */,
 				AAB347592679197600C39BEA /* GoogleService-Info.plist in Resources */,
+				AA349485268BE58B00467C0C /* Photo.storyboard in Resources */,
 				AAE950862679163B00F4939A /* Assets.xcassets in Resources */,
 				AAE950842679163A00F4939A /* Main.storyboard in Resources */,
 			);
@@ -293,14 +314,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AA34948B268BEBD500467C0C /* Photo.swift in Sources */,
 				AAE950972679174600F4939A /* LoginViewController.swift in Sources */,
+				AA349489268BE85400467C0C /* FirebasePhotoFunctions.swift in Sources */,
 				AA9016F4267D04CB0029A541 /* UserTableViewCell.swift in Sources */,
-				AAF7FED426792D5400DF0EA5 /* FirebaseFunctions.swift in Sources */,
+				AA349487268BE5F000467C0C /* PhotoViewController.swift in Sources */,
 				AA9016F1267D04200029A541 /* UsersTableViewController.swift in Sources */,
 				AA8BC22C267962F4001229AF /* AccountViewController.swift in Sources */,
-				AAF7FED2267923C100DF0EA5 /* PasswordValidator.swift in Sources */,
+				AA349482268BE40B00467C0C /* FirebaseFunctions.swift in Sources */,
 				AAE9507D2679163A00F4939A /* AppDelegate.swift in Sources */,
 				AAE9507F2679163A00F4939A /* SceneDelegate.swift in Sources */,
+				AA349483268BE40B00467C0C /* PasswordValidator.swift in Sources */,
 				AAF7FECF267921AD00DF0EA5 /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

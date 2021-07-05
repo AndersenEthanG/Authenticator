@@ -160,7 +160,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="2ac-Zf-Wuf">
-                                <rect key="frame" x="64" y="216" width="286" height="432.5"/>
+                                <rect key="frame" x="64" y="216" width="286" height="494.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="99" translatesAutoresizingMaskIntoConstraints="NO" id="hEt-8u-MvZ">
                                         <rect key="frame" x="0.0" y="0.0" width="286" height="20.5"/>
@@ -200,6 +200,13 @@
                                         <state key="normal" title="Friends"/>
                                         <connections>
                                             <segue destination="YD8-av-Pip" kind="show" id="jFn-Sq-2wE"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SpI-OA-eQp">
+                                        <rect key="frame" x="0.0" y="464.5" width="286" height="30"/>
+                                        <state key="normal" title="Photo"/>
+                                        <connections>
+                                            <action selector="photoBtn:" destination="V1y-pf-Tp1" eventType="touchUpInside" id="qgl-cx-iSE"/>
                                         </connections>
                                     </button>
                                 </subviews>
